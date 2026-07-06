@@ -1,0 +1,61 @@
+# ====================
+# Node / Frontend
+# ====================
+node_modules/
+dist/
+dist-ssr/
+*.local
+*.tsbuildinfo
+.eslintcache
+
+# ====================
+# Java / Maven / Backend
+# ====================
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!/.mvn/wrapper/maven-wrapper.properties
+*.class
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+replay_pid*
+
+# ====================
+# IDE
+# ====================
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+!.vscode/extensions.json
+
+# ====================
+# OS
+# ====================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ====================
+# Logs
+# ====================
+logs/
+*.log
+
+# ====================
+# Env
+# ====================
+.env.local
+.env.*.local
+
+# ====================
+# Misc
+# ====================
+*.sw?
+*.bak

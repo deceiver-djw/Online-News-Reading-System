@@ -1,0 +1,47 @@
+server:
+  port: 8080
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 100MB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/online_news?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    username: root
+    password: root
+  sql:
+    init:
+      mode: never
+  ai:
+    deepseek:
+      api-key: ${DeepSeekAPIKey}
+      base-url: https://api.deepseek.com
+      chat:
+        options:
+          model: deepseek-chat
+
+# 百度千帆配置
+qianfan:
+  # API Key（从百度千帆控制台获取，格式：bce-v3/ALTAK-****）
+  api-key: ${AlibabaAPIKey}
+  # 图片保存路径
+  image-save-path: C:\images
+  # 图片生成模型，可选：qwen-image、flux.1-schnell等
+  image-model: qwen-image
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+  type-enums-package: com.qst.onlinenewsbackend.enums
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
